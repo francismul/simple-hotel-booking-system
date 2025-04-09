@@ -8,6 +8,9 @@
 
 import java.util.Scanner;
 
+/**
+ * 
+ */
 class Hotel {
     private String[][] rooms = {
             { "101", "", "Available" },
@@ -23,6 +26,9 @@ class Hotel {
             { "111", "", "Available" },
     };
 
+    /**
+     * 
+     */
     public void displayAvailableRooms() {
         System.out.println("\nAvailable Rooms");
         for (String[] room : rooms) {
@@ -33,6 +39,11 @@ class Hotel {
         System.out.println("\n");
     }
 
+    /**
+     * 
+     * @param guestName
+     * @param roomNo
+     */
     public void checkInGuest(String guestName, String roomNo) {
         boolean booked = false;
         boolean available = false;
@@ -52,11 +63,14 @@ class Hotel {
             }
         }
         if (!booked && !available) {
-            System.out.println("\nRoom with room no: " + roomNo + "does not exist\n");
+            System.out.println("\nRoom with room no: " + roomNo + " does not exist\n");
         }
     }
 }
 
+/**
+ * 
+ */
 public class App {
     public static void main(String[] args) {
         System.out.println("Welcome to Lamba Hotel");
